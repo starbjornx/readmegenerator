@@ -27,11 +27,7 @@ inquirer
       message: "Description:",
       name: "description",
     },
-    // {
-    //   type: "input",
-    //   message: "Table of Contents:",
-    //   name: "tableOfContents",
-    // },
+   
     {
       type: "input",
       message: "Installation instructions:",
@@ -42,10 +38,11 @@ inquirer
       message: "Usage:",
       name: "usage",
     },
+
     {
       type: "input",
-      message: "Credits:",
-      name: "credits",
+      message: "GitHub User Name:",
+      name: "gitHub",
     },
     {
       type: "list",
@@ -65,8 +62,8 @@ inquirer
     },
     {
       type: "input",
-      message: "GitHub User Name:",
-      name: "gitHub",
+      message: "Credits:",
+      name: "credits",
     },
   ])
   .then((response) => {
