@@ -39,9 +39,9 @@ function renderLicenseBadge(balogna) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(balogna) {
+function renderLicenseLink(ramen) {
   for (let i = 0; i < badge.length; i++) {
-    if (balogna.license == badge[i].name) {
+    if (ramen.license == badge[i].name) {
       return badge[i].link;
     } else {
       return "none";
@@ -51,12 +51,12 @@ function renderLicenseLink(balogna) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(balogna) {
+function renderLicenseSection(ramen) {
   for (let i = 0; i < badge.length; i++) {
-    if (balogna.license == badge[i].name) {
+    if (ramen.license == badge[i].name) {
       return (
-        renderLicenseBadge(balogna) +
-        renderLicenseLink(balogna) +
+        renderLicenseBadge(ramen) +
+        renderLicenseLink(ramen) +
         "\n" +
         badge[i].desc
       );
@@ -90,7 +90,7 @@ function generateMarkdown(response) {
    ${response.tests}
    ## Questions 
    ${response.questions}\n
-   [GitHub User](https://github.com/${response.gitHub})
+   ## GitHub:[GitHub User](https://github.com/${response.gitHub})
 `;
 }
 
